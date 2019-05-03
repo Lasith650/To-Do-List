@@ -44,12 +44,13 @@ class App extends Component{
   render(){
   return (
     <div className="App">
-    <Header/>
-    <AddTodo/>
-      <Todos todos={this.state.todos} markComplete={this.markComplete} delToDo={this.delToDo}/>
+      <div className="container">
+        <Header/>
+        <AddTodo/>
+        <Todos todos={this.state.todos} markComplete={this.markComplete} delToDo={this.delToDo}/>
+      </div>
     </div>
   );
 }
 }
-
 export default App;
