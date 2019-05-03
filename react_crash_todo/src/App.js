@@ -9,17 +9,17 @@ class App extends Component{
       {
         id: 1,
         title: 'Lasith',
-        compleated: false
+        completed: true
       },
       {
         id: 2,
         title: 'Manaram',
-        compleated: false
+        completed: true
       },
       {
         id: 3,
         title: 'Jayalath',
-        compleated: false
+        completed: false
       }
     ]
   }
