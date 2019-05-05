@@ -20,15 +20,9 @@ export class Todoitem extends Component {
       }
     }
   }
-
-  // markComplete = () => {
-  //   console.log(this.props)
-  // }
-
   render() {
     //Structuring has been done
     const {id,title} = this.props.todo;
-
     return (
       <div style={this.getStyle()}>
         <p>
@@ -40,12 +34,10 @@ export class Todoitem extends Component {
     )
   }
 }
-
 //Prop Types
 Todoitem.propTypes = {
     todo: PropTypes.object.isRequired
   }
-
 const btnStyle = {
   background: '#ff0000',
   color: '#fff',
@@ -55,5 +47,4 @@ const btnStyle = {
   cursor: 'pointer',
   float: 'right'
 }
-
 export default Todoitem

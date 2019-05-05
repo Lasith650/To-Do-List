@@ -6,19 +6,16 @@ import Todos from './components/Todos';
 import About from './components/pages/About';
 import uuid from 'uuid';
 import axios from 'axios';
-
 import './App.css';
 
 class App extends Component{
   state = {
     todos: []
   }
-
   componentDidMount(){
     axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
       .then(res => this.setState({todos:res.data}))
   }
-
   //Toggle Complete
   markComplete = (id) => {
     this.setState({todos:this.state.todos.map(todo => {
@@ -28,12 +25,10 @@ class App extends Component{
       return todo;
     })})
   }
-
   //Delete Todo
   delToDo = (id) => {
     this.setState({todos: [...this.state.todos.filter(todo => todo.id !== id)]});
   }
-
   //Add Todo
   addTodo = (title) => {
     const newTodo = {
@@ -43,7 +38,6 @@ class App extends Component{
     }
     this.setState({todos: [...this.state.todos, newTodo]});
   }
-
   render(){
   return (
     <Router>

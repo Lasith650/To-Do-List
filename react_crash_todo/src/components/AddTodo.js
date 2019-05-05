@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 
 export class AddTodo extends Component {
-
     state = {
         title: ''
     }
-
     onChange = (e) => this.setState({[e.target.name]:e.target.value});
 
     onSubmit = (e) => {
@@ -13,7 +11,6 @@ export class AddTodo extends Component {
         this.props.addTodo(this.state.title);
         this.setState({title: ''});
     }
-
   render() {
     return (
         <form onSubmit={this.onSubmit} style={{display: 'flex'}}>
@@ -26,7 +23,6 @@ export class AddTodo extends Component {
                 value={this.state.title}
                 onChange={this.onChange}
             />
-
             <input
                 type="submit"
                 value="Submit"
@@ -37,5 +33,4 @@ export class AddTodo extends Component {
     )
   }
 }
-
 export default AddTodo
